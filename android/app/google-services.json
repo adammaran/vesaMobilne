@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "716265823036",
+    "project_id": "turisticka-agencija-4b8a7",
+    "storage_bucket": "turisticka-agencija-4b8a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716265823036:android:699db58e0b7c0c78415c39",
+        "android_client_info": {
+          "package_name": "com.veselin.turistickaagencija"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716265823036-mtovuq7kb8koihdqnk5mjo625nbj44mk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjml3DH_uwa6wqNZ_miD3BTBxPdbxdS5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716265823036-mtovuq7kb8koihdqnk5mjo625nbj44mk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
