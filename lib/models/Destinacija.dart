@@ -1,5 +1,9 @@
 class Destination {
-  Destination.create({required this.id, required this.destination, required this.price, required this.description});
+  Destination.create(
+      {required this.id,
+      required this.destination,
+      required this.price,
+      required this.description});
 
   final String id;
   final String destination;

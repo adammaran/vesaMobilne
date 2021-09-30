@@ -31,7 +31,6 @@ class DestinationRepository {
     List<Destination> destinationList = [];
     QuerySnapshot doc =
         await _databaseReference.collection('destinations').get();
-    //Probaj umesto mapiranja ovde da samo posaljes ceo Query snap pa u UI da se drkas sa vadjnjem podataka :)
     doc.docs.forEach((element) {
       destinationList.add(Destination.create(
           id: element.get('id'),
@@ -47,13 +46,13 @@ class DestinationRepository {
   }
 
   void editDestById(destination, price, description, id) async {
-    print(id);
     _databaseReference.collection('destinations').doc(id).update({
       'destination': description,
       'price': price,
       'description': description
     }).then((value) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => AllDestinationsScreen()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => AllDestinationsScreen()));
     });
   }
 }

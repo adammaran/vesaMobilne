@@ -56,19 +56,23 @@ class AllDestinationsState extends State<AllDestinationsScreen> {
                     return Card(
                       child: Column(
                         children: [
-                          Row(
-                            children: [
-                              Text("Destinacija: ",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                              Text(snap.data.elementAt(index).destination),
-                              SizedBox(width: 12),
-                              Text("Cena",
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                              Text(snap.data.elementAt(index).price.toString())
-                            ],
+                          Container(
+                            height: 50,
+                            child: Row(
+                              children: [
+                                Text("Destinacija: ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                                Text(snap.data.elementAt(index).destination),
+                                SizedBox(width: 12),
+                                Text("Cena",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                                Text(snap.data.elementAt(index).price.toString())
+                              ],
+                            ),
                           ),
+                          FirebaseAuth.instance.currentUser != null ?
                           Container(
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -94,7 +98,7 @@ class AllDestinationsState extends State<AllDestinationsScreen> {
                                     child: Text("Obriši"))
                               ],
                             ),
-                          )
+                          ) : Container()
                         ],
                       ),
                     );
